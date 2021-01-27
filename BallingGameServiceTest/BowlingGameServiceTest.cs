@@ -147,7 +147,17 @@ namespace xp.tdd.bowling.game.service.test
         }
 
 
-        
+
+        //Should Identify Strike and return true
+        [Test]
+        public void Should_Return_True_When_Roll_Score_Is_10_In_One_Frame()
+        {
+            BowlingGame _game = new BowlingGame();
+
+            _game.PlayRoll(10);
+
+            Assert.IsTrue(_game.IsStrikeIdentifiedInFrame(0));
+        }
 
 
         [OneTimeTearDown]

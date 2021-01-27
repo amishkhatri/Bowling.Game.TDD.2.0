@@ -41,7 +41,18 @@ namespace xp.tdd.bowling.game.service
 
             return result;
         }
-        
+
+
+        public bool IsStrikeIdentifiedInFrame(int RollPosition)
+        {
+            bool result = false;
+            result = (Rolls[RollPosition] == 10);
+
+            return result;
+
+        }
+
+
         public int Score()
         { 
             int score = 0;
