@@ -146,6 +146,21 @@ namespace xp.tdd.bowling.game.service.test
             Assert.IsTrue(_game.IsSpareIdentifiedInFrame(0));
         }
 
+        /// <summary>
+        /// Calculate cumulative sum of score when spare in a frame 
+        /// </summary>
+        [Test]
+        public void Should_Return_Calculated_Score_For_Current_Frame_When_Spare_In_Frame()
+        {
+            BowlingGame _game = new BowlingGame();
+
+            _game.PlayRoll(5);
+            _game.PlayRoll(5);
+
+            _game.PlayRoll(4);
+
+            Assert.AreEqual(24, _game.Score());
+        }
 
 
         //Should Identify Strike and return true

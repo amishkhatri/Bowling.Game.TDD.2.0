@@ -52,14 +52,26 @@ namespace xp.tdd.bowling.game.service
 
         }
 
-
         public int Score()
         { 
             int score = 0;
+            int index = 0;
 
-            for (int i = 0; i < Rolls.Length; i++)
+
+            for (int frm = 0; frm < 10; frm++)
             {
-                score += Rolls[i];
+                if (IsSpareIdentifiedInFrame(index))
+                {
+                    score += 10 + Rolls[index+2];
+                    index = index + 2;
+                }
+                else
+                {
+                    for (int i = 0; i < Rolls.Length; i++)
+                        score += Rolls[i];                    
+
+                }
+                    //score += Rolls[i];
             }
 
             return score;
