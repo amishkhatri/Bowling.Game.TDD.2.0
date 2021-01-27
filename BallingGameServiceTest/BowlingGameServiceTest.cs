@@ -136,7 +136,7 @@ namespace xp.tdd.bowling.game.service.test
 
         //Should Identify Spare and return true
         [Test]
-        public void Should_Return_Pass_When_Two_Rolls_Score_Is_10_In_One_Frame()
+        public void Should_Return_True_When_Two_Rolls_Score_Is_10_In_One_Frame()
         {
             BowlingGame _game = new BowlingGame();
 
@@ -146,6 +146,8 @@ namespace xp.tdd.bowling.game.service.test
             Assert.IsTrue(_game.IsSpareIdentifiedInFrame(0));
         }
 
+
+        
 
 
         [OneTimeTearDown]

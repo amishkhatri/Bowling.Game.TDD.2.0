@@ -27,8 +27,7 @@ namespace xp.tdd.bowling.game.service
         {
             return IndexRoll % 2 > 0 ? (IndexRoll / 2) + 1 : IndexRoll / 2;
         }
-
-               
+                       
         public void PlayRoll(int pinscore)
         {
             Rolls[IndexRoll++] = pinscore;
@@ -54,7 +53,6 @@ namespace xp.tdd.bowling.game.service
 
             return score;
         }
-
 
         public void PlayMulitpleRolls(int totalrolls, int knockpins)
         {
